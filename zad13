@@ -1,0 +1,15 @@
+#!/bin/bash
+# ** nalezy dzielic odpowiednio przedzialy na pol
+rand=$((RANDOM%50+1))
+while true; do
+   echo Zgadnij[1,50]:
+   read number
+   if ((number<rand)); then
+      echo Za malo
+   elif ((number>rand)); then
+      echo Za duzo
+   else 
+      echo Ok
+      exit
+   fi
+done
