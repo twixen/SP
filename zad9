@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# 2> /dev/null -- Przekierowanie standardowego wyjscia do czarnej dziury.
+# 2> /dev/null -- Przekierowanie standardowego wyjscia bledow do czarnej dziury.
 
 x=`du --max-depth=1 2> /dev/null /etc | grep /etc/` 
 echo Najmniejszy
