@@ -1,6 +1,8 @@
 #!/bin/bash
-if [ $1 == 4 ]; then
-   echo 2+2=$1
+echo 2 + 3 = ?
+read number
+if ((number==5)); then
+   echo 2 + 3 = $number
 else
-   echo 2+2!=$1
+   echo 2 + 3 != $number
 fi
