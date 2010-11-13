@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ $1 == 4 ]; then
+   echo 2+2=$1
+else
+   echo 2+2!=$1
+fi
