@@ -1,0 +1,5 @@
+#!/bin/bash
+echo . - Dowolny znak
+echo \. - Kropka
+echo / - Podmienia raz
+echo /g - Podmienia wielokrotnie
