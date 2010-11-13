@@ -1,0 +1,12 @@
+#!/bin/bash
+rand=$((RANDOM%50+1))
+echo Wylosowana liczba[1,50] = $rand
+echo Podaj liczbe[1,50]:
+read number
+if ((number<rand)); then
+   echo $number \< $rand
+elif ((number>rand)); then
+   echo $number \> $rand
+else
+   echo $number == $rand
+fi
