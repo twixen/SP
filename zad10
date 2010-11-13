@@ -1,0 +1,8 @@
+#!/bin/bash
+echo Podaj tekst do testowania:
+read text1
+echo Podaj wyrazenie regularne:
+read regex
+echo Podaj tekst zastepujacy:
+read text2
+echo Wynik: $text1 | sed s/$regex/$text2/g
