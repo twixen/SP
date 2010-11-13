@@ -1,0 +1,7 @@
+#!/bin/bash
+x=`du --max-depth=1 2> /dev/null /etc | grep /etc/` 
+echo Najmniejszy
+echo "$x" | sort -n | head -1
+echo Najwiekszy 
+echo "$x" | sort -nr | head -1
+
