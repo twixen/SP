@@ -2,9 +2,9 @@
 
 # 2> /dev/null -- Przekierowanie standardowego wyjscia bledow do czarnej dziury.
 
-x=`du --max-depth=1 2> /dev/null /etc | grep /etc/` 
+x=`du --max-depth=1 2> /dev/null /etc | grep /etc/ | sort -n` 
 echo Najmniejszy
-echo "$x" | sort -n | head -1
+echo "$x" | head -1
 echo Najwiekszy 
-echo "$x" | sort -nr | head -1
+echo "$x" | tail -1
 
