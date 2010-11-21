@@ -4,9 +4,9 @@ echo Wylosowana liczba[1,50] = $rand
 echo Podaj liczbe[1,50]:
 read number
 if ((number<rand)); then
-   echo $number \< $rand
+   echo Za malo
 elif ((number>rand)); then
-   echo $number \> $rand
+   echo Za duzo
 else
-   echo $number == $rand
+   echo Ok
 fi
