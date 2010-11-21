@@ -1,0 +1,2 @@
+#!/bin/bash
+./genlogs.sh $1 | cut -d ' ' -f 11- | sed 's/[(:].*//' | sort | uniq
