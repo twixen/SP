@@ -1,0 +1,2 @@
+#!/bin/bash
+who | cut -d ' ' -f 1 | grep $1 | wc -l | sed 's/0/nie/' | sed 's/1/tak/'
