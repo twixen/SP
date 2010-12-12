@@ -1,0 +1,6 @@
+#!/bin/bash
+find ~ -perm 777
+find ~ -atime +7
+find ~ -size +100k
+find ~ -empty
+find ~ -atime +30 -size +500k
