@@ -1,0 +1,162 @@
+\documentclass[12pt,a4paper]{article}
+
+% ustawienia marginesu
+\usepackage[left=1.6in,right=.8in,top=1.5in,bottom=1.5in]{geometry}
+
+% polskie regu³y dzielenia wyrazów itd
+\usepackage{polski}
+
+% polskie znaki zakodowane w UTF8
+\usepackage[utf8]{inputenc}
+
+% automatyczne generowanie odnoœników w plikach PDF
+\usepackage[pdftex,linkbordercolor={0 0.9 1}]{hyperref}
+%
+% pakiety matematyczne
+\usepackage{amsthm,amsmath,amsfonts,amssymb,mathrsfs}
+
+% ³adne sk³adanie odnoœników do stron www
+\usepackage{url}
+
+% rozbudowane mo¿liwoœci wypunktowañ
+\usepackage{enumerate}
+
+% mo¿liwoœæ dodawania plików graficznych
+\usepackage{graphicx} 
+
+%%% definicje twierdzeñ itd :)
+\newtheorem{tw}{Twierdzenie}[section]
+\newtheorem{stw}[tw]{Stwierdzenie}
+\newtheorem{fakt}[tw]{Fakt}
+\newtheorem{lemat}[tw]{Lemat}
+
+\theoremstyle{definition}
+\newtheorem{df}[tw]{Definicja}
+\newtheorem{ex}[tw]{Przyk³ad}
+\newtheorem{uw}[tw]{Uwaga}
+\newtheorem{wn}[tw]{Wniosek}
+\newtheorem{zad}{Zadanie}
+
+% oznaczenia zbiorów liczbowych
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+
+% wartoœæ bezwzglêdna, norma, iloczyn skalarny, noœnik, rozpiêcie przestrzeni...
+\providecommand{\abs}[1]{\left\lvert#1\right\rvert}
+\providecommand{\var}[1]{\operatorname{var}(#1)}
+
+% fajne nag³ówki i stopki na stronie
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\textbf{\thepage}}
+\fancyhead[L]{\small\sffamily \nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt}
+
+% typowe dane dokumentu
+\title{Funkcje ci¹g³e i ró¿niczkowalne}
+\date{\today}
+
+% tu podaj swoje imiê i nazwisko!
+\author{Damian Soliñski}
+
+% zaczynamy dokument
+\begin{document}
+ 
+% poka¿ tytu³
+\maketitle
+
+% spis treœci
+\tableofcontents
+
+\section{Funkcje ci¹g³e}
+
+\begin{df}
+(funkcja ci¹g³a). Niech $f:(a,b)\to\R$, oraz niech $x_0\in(a,b)$. Mówimy, ¿e funkcja $f$ jest ci¹g³a w punkcie $x_0$ wtedy i tylko wtedy, gdy:
+\[\forall_{\varepsilon<0}\exists_{\delta<0}\forall x\in(a,b)|x-x_0|<\delta\Rightarrow|f(x)-f(x_0)|<\varepsilon\]
+\end{df}
+
+\begin{ex}
+Wielomiany, funkcje trygonometryczne, wyk³adnicze, logarytmiczne s¹ ci¹g³e w ka¿dym punkcie swojej dziedziny.
+\end{ex}
+
+\begin{ex}
+Funkcja $f$ dana wzorem:
+\[f(x)=\left\{\begin{array}{ll}x+1&\mbox{dla}\ x\neq0\\0&\mbox{dla}\ x=0\end{array}\right.\]
+Jest ci¹g³a w ka¿dym punkcie poza $x_0 = 0$.
+\\\\ Niech $\Q$ oznacza zbiór wszystkich liczb wymiernych.
+\end{ex}
+
+\begin{ex}
+Funkcja $f$ dana wzorem:
+\[f(x)=\left\{\begin{array}{ll}0&\mbox{dla}\ x\in\Q\\1&\mbox{dla}\ x\not\in\Q\end{array}\right.\]
+nie jest ci¹g³a w ¿adnym punkcie.
+\end{ex}
+
+\begin{ex}
+Funkcja $f$ dana wzorem:
+\[f(x)=\left\{\begin{array}{ll}0&\mbox{dla}\ x\in\Q\\x&\mbox{dla}\ x\not\in\Q\end{array}\right.\]
+jest ci¹g³a w punkcie $x_0=0$, ale nie jest ci¹g³a w pozosta³ych punktach dziedziny.
+\end{ex}
+
+\begin{zad}
+Udowodnij prawdziwoœæ podanych przyk³adów.
+\end{zad}
+
+\begin{df}
+Jeœli funkcja $f:A\to\R$ jest ci¹g³a w ka¿dym punkcie swojej dziedziny $A$ to mówimy krótko, ze jest ci¹g³a.
+\end{df}
+
+Poni¿sze twierdzenie zbiera podstawowe w³asnoœci zbioru funkcji ci¹g³ych.
+
+\begin{tw}
+Niech funkcje $f,g:R\to\R$ bêd¹ ci¹g³e, oraz niech $\alpha,\beta\in\R$. Wtedy funkcje:
+\begin{enumerate}[a)]
+\item $h_1(x)=\alpha\cdot f(x)+\beta\cdot g(x)$,
+\item $h_2(x)=f(x)\cdot g(x)$,
+\item $h_3(x)=\frac{f(x)}{g(x)}$ (o ile $g(x)\not=0$ dla dowolnego $x\in\R$),
+\item $h_4(x)=f(g(x))$,
+\end{enumerate}
+s¹ ci¹g³e.
+\end{tw}
+
+Nastêpne twierdzenie zwane powszechnie „w³asnoœci¹ Darboux” lub twierdzeniem
+o wartoœci poœredniej ma liczne praktyczne zastosowania. Mówi ono o tym,
+ze jeœli funkcja ci¹g³a przyjmuje jakieœ dwie wartoœci, to przy odpowiednich za³o¿eniach
+co do dziedziny, przyjmuje tez wszystkie wartoœci poœrednie. Mo¿emy sobie to
+³atwo wyobraziæ na przyk³adzie funkcji, która opisuje zmianê temperatury w czasie.
+Jesli o 7:00 by³o $-1^{\circ}$C a o 9:00 by³o $2^{\circ}$C, to zapewne gdzieœ miêdzy 7:00 a 9:00 by³
+taki moment, ze temperatura wynosi³a dok³adnie $0^{\circ}$C.
+
+\begin{tw}
+Niech $f:[a,b]\to\R$ ci¹g³a, oraz niech $f(a)\not=f(b)$. Wtedy dla dowolnego $y_0\in conv\{f(a),f(b)\}$ istnieje $x_0\in[a, b]$ takie, ¿e $f(x_0)=y_0$.
+\end{tw}
+
+\section{Ró¿niczkowalnoœæ}
+
+\begin{df}
+Niech $f:(a,b)\to\R$, $x_0\in(a,b)$ oraz $f$ ci¹g³a w otoczeniu punktu $x_0$. Jeœli istnieje granica:
+\[\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}\]
+i jest skoñczona, to oznaczamy j¹ przez $f'(x_0)$ i nazywamy pochodn¹ funkcji $f$ w punkcie $x_0$.
+\end{df}
+
+\begin{df}
+Jeœli funkcja $f$ posiada pochodna w ka¿dym punkcie swojej dziedziny, to mówimy, ¿e $f$ jest ró¿niczkowalna. Istnieje wtedy funkcja $f'$, która ka¿demu punktowi z dziedziny funkcji $f$ przyporz¹dkowuje wartoœæ pochodnej pochodnej funkcji $f$ w tym punkcie.
+\end{df}
+
+\begin{ex}
+Wielomiany, funkcje trygonometryczne, wyk³adnicze, logarytmiczne s¹ ró¿niczkowalne w ka¿dym punkcie dziedziny.
+\end{ex}
+
+\begin{ex}
+Funkcja $f(x)=|x|$ jest ci¹g³a, ale nie posiada pochodnej w punkcie $x_0=0$.
+\end{ex}
+
+\begin{tw}
+Niech $f:[a,b]\to\R$ ci¹g³a i ró¿niczkowalna na $(a,b)$. Dodatkowo niech $f'(x)\not=0$ dla $x\in(a, b)$, oraz niech $m=min_{x\in[a,b]}f(x)$, $M = max_{x\in[a,b]}f(x)$. Wtedy na pewno $f(a)=m$, $f(b)=M$ lub $f(a)=M$ i $f(b)=m$.
+\end{tw}
+
+\end{document}
