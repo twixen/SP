@@ -3,28 +3,28 @@
 % ustawienia marginesu
 \usepackage[left=1.6in,right=.8in,top=1.5in,bottom=1.5in]{geometry}
 
-% polskie regu≥y dzielenia wyrazÛw itd
+% polskie regu≈Çy dzielenia wyraz√≥w itd
 \usepackage{polski}
 
 % polskie znaki zakodowane w UTF8
 \usepackage[utf8]{inputenc}
 
-% automatyczne generowanie odnoúnikÛw w plikach PDF
+% automatyczne generowanie odno≈õnik√≥w w plikach PDF
 \usepackage[pdftex,linkbordercolor={0 0.9 1}]{hyperref}
 %
 % pakiety matematyczne
 \usepackage{amsthm,amsmath,amsfonts,amssymb,mathrsfs}
 
-% ≥adne sk≥adanie odnoúnikÛw do stron www
+% ≈Çadne sk≈Çadanie odno≈õnik√≥w do stron www
 \usepackage{url}
 
-% rozbudowane moøliwoúci wypunktowaÒ
+% rozbudowane mo≈ºliwo≈õci wypunktowa≈Ñ
 \usepackage{enumerate}
 
-% moøliwoúÊ dodawania plikÛw graficznych
+% mo≈ºliwo≈õƒá dodawania plik√≥w graficznych
 \usepackage{graphicx} 
 
-%%% definicje twierdzeÒ itd :)
+%%% definicje twierdze≈Ñ itd :)
 \newtheorem{tw}{Twierdzenie}[section]
 \newtheorem{stw}[tw]{Stwierdzenie}
 \newtheorem{fakt}[tw]{Fakt}
@@ -32,22 +32,22 @@
 
 \theoremstyle{definition}
 \newtheorem{df}[tw]{Definicja}
-\newtheorem{ex}[tw]{Przyk≥ad}
+\newtheorem{ex}[tw]{Przyk≈Çad}
 \newtheorem{uw}[tw]{Uwaga}
 \newtheorem{wn}[tw]{Wniosek}
 \newtheorem{zad}{Zadanie}
 
-% oznaczenia zbiorÛw liczbowych
+% oznaczenia zbior√≥w liczbowych
 \DeclareMathOperator{\R}{\mathbb{R}}
 \DeclareMathOperator{\Z}{\mathbb{Z}}
 \DeclareMathOperator{\N}{\mathbb{N}}
 \DeclareMathOperator{\Q}{\mathbb{Q}}
 
-% wartoúÊ bezwzglÍdna, norma, iloczyn skalarny, noúnik, rozpiÍcie przestrzeni...
+% warto≈õƒá bezwzglƒôdna, norma, iloczyn skalarny, no≈õnik, rozpiƒôcie przestrzeni...
 \providecommand{\abs}[1]{\left\lvert#1\right\rvert}
 \providecommand{\var}[1]{\operatorname{var}(#1)}
 
-% fajne nag≥Ûwki i stopki na stronie
+% fajne nag≈Ç√≥wki i stopki na stronie
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -57,106 +57,106 @@
 \renewcommand{\footrulewidth}{0.4pt}
 
 % typowe dane dokumentu
-\title{Funkcje ciπg≥e i rÛøniczkowalne}
+\title{Funkcje ciƒÖg≈Çe i r√≥≈ºniczkowalne}
 \date{\today}
 
-% tu podaj swoje imiÍ i nazwisko!
-\author{Damian SoliÒski}
+% tu podaj swoje imiƒô i nazwisko!
+\author{Damian Soli≈Ñski}
 
 % zaczynamy dokument
 \begin{document}
  
-% pokaø tytu≥
+% poka≈º tytu≈Ç
 \maketitle
 
-% spis treúci
+% spis tre≈õci
 \tableofcontents
 
-\section{Funkcje ciπg≥e}
+\section{Funkcje ciƒÖg≈Çe}
 
 \begin{df}
-(funkcja ciπg≥a). Niech $f:(a,b)\to\R$, oraz niech $x_0\in(a,b)$. MÛwimy, øe funkcja $f$ jest ciπg≥a w punkcie $x_0$ wtedy i tylko wtedy, gdy:
+(funkcja ciƒÖg≈Ça). Niech $f:(a,b)\to\R$, oraz niech $x_0\in(a,b)$. M√≥wimy, ≈ºe funkcja $f$ jest ciƒÖg≈Ça w punkcie $x_0$ wtedy i tylko wtedy, gdy:
 \[\forall_{\varepsilon<0}\exists_{\delta<0}\forall x\in(a,b)|x-x_0|<\delta\Rightarrow|f(x)-f(x_0)|<\varepsilon\]
 \end{df}
 
 \begin{ex}
-Wielomiany, funkcje trygonometryczne, wyk≥adnicze, logarytmiczne sπ ciπg≥e w kaødym punkcie swojej dziedziny.
+Wielomiany, funkcje trygonometryczne, wyk≈Çadnicze, logarytmiczne sƒÖ ciƒÖg≈Çe w ka≈ºdym punkcie swojej dziedziny.
 \end{ex}
 
 \begin{ex}
 Funkcja $f$ dana wzorem:
 \[f(x)=\left\{\begin{array}{ll}x+1&\mbox{dla}\ x\neq0\\0&\mbox{dla}\ x=0\end{array}\right.\]
-Jest ciπg≥a w kaødym punkcie poza $x_0 = 0$.
-\\\\ Niech $\Q$ oznacza zbiÛr wszystkich liczb wymiernych.
+Jest ciƒÖg≈Ça w ka≈ºdym punkcie poza $x_0 = 0$.
+\\\\ Niech $\Q$ oznacza zbi√≥r wszystkich liczb wymiernych.
 \end{ex}
 
 \begin{ex}
 Funkcja $f$ dana wzorem:
 \[f(x)=\left\{\begin{array}{ll}0&\mbox{dla}\ x\in\Q\\1&\mbox{dla}\ x\not\in\Q\end{array}\right.\]
-nie jest ciπg≥a w øadnym punkcie.
+nie jest ciƒÖg≈Ça w ≈ºadnym punkcie.
 \end{ex}
 
 \begin{ex}
 Funkcja $f$ dana wzorem:
 \[f(x)=\left\{\begin{array}{ll}0&\mbox{dla}\ x\in\Q\\x&\mbox{dla}\ x\not\in\Q\end{array}\right.\]
-jest ciπg≥a w punkcie $x_0=0$, ale nie jest ciπg≥a w pozosta≥ych punktach dziedziny.
+jest ciƒÖg≈Ça w punkcie $x_0=0$, ale nie jest ciƒÖg≈Ça w pozosta≈Çych punktach dziedziny.
 \end{ex}
 
 \begin{zad}
-Udowodnij prawdziwoúÊ podanych przyk≥adÛw.
+Udowodnij prawdziwo≈õƒá podanych przyk≈Çad√≥w.
 \end{zad}
 
 \begin{df}
-Jeúli funkcja $f:A\to\R$ jest ciπg≥a w kaødym punkcie swojej dziedziny $A$ to mÛwimy krÛtko, ze jest ciπg≥a.
+Je≈õli funkcja $f:A\to\R$ jest ciƒÖg≈Ça w ka≈ºdym punkcie swojej dziedziny $A$ to m√≥wimy kr√≥tko, ze jest ciƒÖg≈Ça.
 \end{df}
 
-Poniøsze twierdzenie zbiera podstawowe w≥asnoúci zbioru funkcji ciπg≥ych.
+Poni≈ºsze twierdzenie zbiera podstawowe w≈Çasno≈õci zbioru funkcji ciƒÖg≈Çych.
 
 \begin{tw}
-Niech funkcje $f,g:R\to\R$ bÍdπ ciπg≥e, oraz niech $\alpha,\beta\in\R$. Wtedy funkcje:
+Niech funkcje $f,g:R\to\R$ bƒôdƒÖ ciƒÖg≈Çe, oraz niech $\alpha,\beta\in\R$. Wtedy funkcje:
 \begin{enumerate}[a)]
 \item $h_1(x)=\alpha\cdot f(x)+\beta\cdot g(x)$,
 \item $h_2(x)=f(x)\cdot g(x)$,
 \item $h_3(x)=\frac{f(x)}{g(x)}$ (o ile $g(x)\not=0$ dla dowolnego $x\in\R$),
 \item $h_4(x)=f(g(x))$,
 \end{enumerate}
-sπ ciπg≥e.
+sƒÖ ciƒÖg≈Çe.
 \end{tw}
 
-NastÍpne twierdzenie zwane powszechnie Ñw≥asnoúciπ Darbouxî lub twierdzeniem
-o wartoúci poúredniej ma liczne praktyczne zastosowania. MÛwi ono o tym,
-ze jeúli funkcja ciπg≥a przyjmuje jakieú dwie wartoúci, to przy odpowiednich za≥oøeniach
-co do dziedziny, przyjmuje tez wszystkie wartoúci poúrednie. Moøemy sobie to
-≥atwo wyobraziÊ na przyk≥adzie funkcji, ktÛra opisuje zmianÍ temperatury w czasie.
-Jesli o 7:00 by≥o $-1^{\circ}$C a o 9:00 by≥o $2^{\circ}$C, to zapewne gdzieú miÍdzy 7:00 a 9:00 by≥
-taki moment, ze temperatura wynosi≥a dok≥adnie $0^{\circ}$C.
+Nastƒôpne twierdzenie zwane powszechnie ‚Äûw≈Çasno≈õciƒÖ Darboux‚Äù lub twierdzeniem
+o warto≈õci po≈õredniej ma liczne praktyczne zastosowania. M√≥wi ono o tym,
+ze je≈õli funkcja ciƒÖg≈Ça przyjmuje jakie≈õ dwie warto≈õci, to przy odpowiednich za≈Ço≈ºeniach
+co do dziedziny, przyjmuje tez wszystkie warto≈õci po≈õrednie. Mo≈ºemy sobie to
+≈Çatwo wyobraziƒá na przyk≈Çadzie funkcji, kt√≥ra opisuje zmianƒô temperatury w czasie.
+Jesli o 7:00 by≈Ço $-1^{\circ}$C a o 9:00 by≈Ço $2^{\circ}$C, to zapewne gdzie≈õ miƒôdzy 7:00 a 9:00 by≈Ç
+taki moment, ze temperatura wynosi≈Ça dok≈Çadnie $0^{\circ}$C.
 
 \begin{tw}
-Niech $f:[a,b]\to\R$ ciπg≥a, oraz niech $f(a)\not=f(b)$. Wtedy dla dowolnego $y_0\in conv\{f(a),f(b)\}$ istnieje $x_0\in[a, b]$ takie, øe $f(x_0)=y_0$.
+Niech $f:[a,b]\to\R$ ciƒÖg≈Ça, oraz niech $f(a)\not=f(b)$. Wtedy dla dowolnego $y_0\in conv\{f(a),f(b)\}$ istnieje $x_0\in[a, b]$ takie, ≈ºe $f(x_0)=y_0$.
 \end{tw}
 
-\section{RÛøniczkowalnoúÊ}
+\section{R√≥≈ºniczkowalno≈õƒá}
 
 \begin{df}
-Niech $f:(a,b)\to\R$, $x_0\in(a,b)$ oraz $f$ ciπg≥a w otoczeniu punktu $x_0$. Jeúli istnieje granica:
+Niech $f:(a,b)\to\R$, $x_0\in(a,b)$ oraz $f$ ciƒÖg≈Ça w otoczeniu punktu $x_0$. Je≈õli istnieje granica:
 \[\lim_{x\to x_0}\frac{f(x)-f(x_0)}{x-x_0}\]
-i jest skoÒczona, to oznaczamy jπ przez $f'(x_0)$ i nazywamy pochodnπ funkcji $f$ w punkcie $x_0$.
+i jest sko≈Ñczona, to oznaczamy jƒÖ przez $f'(x_0)$ i nazywamy pochodnƒÖ funkcji $f$ w punkcie $x_0$.
 \end{df}
 
 \begin{df}
-Jeúli funkcja $f$ posiada pochodna w kaødym punkcie swojej dziedziny, to mÛwimy, øe $f$ jest rÛøniczkowalna. Istnieje wtedy funkcja $f'$, ktÛra kaødemu punktowi z dziedziny funkcji $f$ przyporzπdkowuje wartoúÊ pochodnej pochodnej funkcji $f$ w tym punkcie.
+Je≈õli funkcja $f$ posiada pochodna w ka≈ºdym punkcie swojej dziedziny, to m√≥wimy, ≈ºe $f$ jest r√≥≈ºniczkowalna. Istnieje wtedy funkcja $f'$, kt√≥ra ka≈ºdemu punktowi z dziedziny funkcji $f$ przyporzƒÖdkowuje warto≈õƒá pochodnej pochodnej funkcji $f$ w tym punkcie.
 \end{df}
 
 \begin{ex}
-Wielomiany, funkcje trygonometryczne, wyk≥adnicze, logarytmiczne sπ rÛøniczkowalne w kaødym punkcie dziedziny.
+Wielomiany, funkcje trygonometryczne, wyk≈Çadnicze, logarytmiczne sƒÖ r√≥≈ºniczkowalne w ka≈ºdym punkcie dziedziny.
 \end{ex}
 
 \begin{ex}
-Funkcja $f(x)=|x|$ jest ciπg≥a, ale nie posiada pochodnej w punkcie $x_0=0$.
+Funkcja $f(x)=|x|$ jest ciƒÖg≈Ça, ale nie posiada pochodnej w punkcie $x_0=0$.
 \end{ex}
 
 \begin{tw}
-Niech $f:[a,b]\to\R$ ciπg≥a i rÛøniczkowalna na $(a,b)$. Dodatkowo niech $f'(x)\not=0$ dla $x\in(a, b)$, oraz niech $m=min_{x\in[a,b]}f(x)$, $M = max_{x\in[a,b]}f(x)$. Wtedy na pewno $f(a)=m$, $f(b)=M$ lub $f(a)=M$ i $f(b)=m$.
+Niech $f:[a,b]\to\R$ ciƒÖg≈Ça i r√≥≈ºniczkowalna na $(a,b)$. Dodatkowo niech $f'(x)\not=0$ dla $x\in(a, b)$, oraz niech $m=min_{x\in[a,b]}f(x)$, $M = max_{x\in[a,b]}f(x)$. Wtedy na pewno $f(a)=m$, $f(b)=M$ lub $f(a)=M$ i $f(b)=m$.
 \end{tw}
 
 \end{document}
