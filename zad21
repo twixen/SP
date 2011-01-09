@@ -1,5 +1,5 @@
 #!/bin/bash
-find ~ -perm 777
+find ~ -perm -222
 find ~ -atime +7
 find ~ -size +100k
 find ~ -empty
