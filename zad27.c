@@ -1,4 +1,4 @@
-#include <stdio.h>
+ï»¿#include <stdio.h>
 #include <stdlib.h>
 #include <sys/time.h>
 
@@ -15,7 +15,7 @@ int silnia2(int n)
     return w;
 }
 
-int newton1(int n, int k) // poprawnie dzia³a dla maksymlanie n = 33, suma przekracza inta, wolna
+int newton1(int n, int k) // poprawnie dziaÅ‚a dla maksymlanie n = 33, suma przekracza inta, wolna
 {
     if(k == 0) return 1;
     if(k == 1) return n;
@@ -23,12 +23,12 @@ int newton1(int n, int k) // poprawnie dzia³a dla maksymlanie n = 33, suma przek
     return newton1(n-1,k-1) + newton1(n-1,k);
 }
 
-int newton2(int n, int k) // poprawnie dzia³a dla maksymlanie n = 12, silnia(12) przekracza inta, szybka
+int newton2(int n, int k) // poprawnie dziaÅ‚a dla maksymlanie n = 12, silnia(12) przekracza inta, szybka
 {
     return silnia2(n)/(silnia2(k)*silnia2(n-k));
 }
 
-int newton3(int n, int k) // poprawnie dzia³a dla maksymlanie n = 29, c przekracza inta, najszybsza
+int newton3(int n, int k) // poprawnie dziaÅ‚a dla maksymlanie n = 29, c przekracza inta, najszybsza
 {
     if(k + k > n) k = n - k;
     int c = 1;
