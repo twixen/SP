@@ -1,2 +1,4 @@
-Przedmiot: Środowisko programisty
-Prowadzący: Witold Bołt
+﻿Środowisko programisty
+==
+Witold Bołt
+--
